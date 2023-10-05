@@ -2,11 +2,12 @@
 # description: test iceberg metadata function
 # group: [iceberg]
 
-# Before we load the extension, this will fail
-statement error
-SELECT * FROM ICEBERG_METADATA('data/iceberg/lineitem_iceberg');
-----
-Catalog Error
+# Commented out because we preload iceberg extension in MD
+# # Before we load the extension, this will fail
+# statement error
+# SELECT * FROM ICEBERG_METADATA('data/iceberg/lineitem_iceberg');
+# ----
+# Catalog Error
 
 require iceberg
 
