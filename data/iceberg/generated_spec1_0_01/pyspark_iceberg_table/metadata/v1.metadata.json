@@ -1,9 +1,9 @@
 {
   "format-version" : 1,
-  "table-uuid" : "4444d1fe-a261-4873-bbf6-1ba48ed5a4a7",
+  "table-uuid" : "f424ef42-5477-4841-b127-2f18e7dad530",
   "location" : "data/iceberg/generated_spec1_0_01/pyspark_iceberg_table",
-  "last-updated-ms" : 1695119341995,
-  "last-column-id" : 23,
+  "last-updated-ms" : 1710862058098,
+  "last-column-id" : 15,
   "schema" : {
     "type" : "struct",
     "schema-id" : 0,
@@ -82,46 +82,6 @@
       "name" : "l_comment_blob",
       "required" : false,
       "type" : "binary"
-    }, {
-      "id" : 16,
-      "name" : "l_shipmode_quantity_struct",
-      "required" : false,
-      "type" : {
-        "type" : "struct",
-        "fields" : [ {
-          "id" : 19,
-          "name" : "a",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "id" : 20,
-          "name" : "b",
-          "required" : false,
-          "type" : "decimal(15, 2)"
-        } ]
-      }
-    }, {
-      "id" : 17,
-      "name" : "l_linenumber_quantity_list",
-      "required" : false,
-      "type" : {
-        "type" : "list",
-        "element-id" : 21,
-        "element" : "decimal(15, 2)",
-        "element-required" : false
-      }
-    }, {
-      "id" : 18,
-      "name" : "l_linenumber_quantity_map",
-      "required" : false,
-      "type" : {
-        "type" : "map",
-        "key-id" : 22,
-        "key" : "string",
-        "value-id" : 23,
-        "value" : "decimal(15, 2)",
-        "value-required" : false
-      }
     } ]
   },
   "current-schema-id" : 0,
@@ -203,46 +163,6 @@
       "name" : "l_comment_blob",
       "required" : false,
       "type" : "binary"
-    }, {
-      "id" : 16,
-      "name" : "l_shipmode_quantity_struct",
-      "required" : false,
-      "type" : {
-        "type" : "struct",
-        "fields" : [ {
-          "id" : 19,
-          "name" : "a",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "id" : 20,
-          "name" : "b",
-          "required" : false,
-          "type" : "decimal(15, 2)"
-        } ]
-      }
-    }, {
-      "id" : 17,
-      "name" : "l_linenumber_quantity_list",
-      "required" : false,
-      "type" : {
-        "type" : "list",
-        "element-id" : 21,
-        "element" : "decimal(15, 2)",
-        "element-required" : false
-      }
-    }, {
-      "id" : 18,
-      "name" : "l_linenumber_quantity_map",
-      "required" : false,
-      "type" : {
-        "type" : "map",
-        "key-id" : 22,
-        "key" : "string",
-        "value-id" : 23,
-        "value" : "decimal(15, 2)",
-        "value-required" : false
-      }
     } ]
   } ],
   "partition-spec" : [ ],
@@ -258,39 +178,40 @@
     "fields" : [ ]
   } ],
   "properties" : {
-    "owner" : "boncz"
+    "owner" : "peter",
+    "write.parquet.compression-codec" : "zstd"
   },
-  "current-snapshot-id" : 7876767841642810569,
+  "current-snapshot-id" : 1427538264954246454,
   "refs" : {
     "main" : {
-      "snapshot-id" : 7876767841642810569,
+      "snapshot-id" : 1427538264954246454,
       "type" : "branch"
     }
   },
   "snapshots" : [ {
-    "snapshot-id" : 7876767841642810569,
-    "timestamp-ms" : 1695119341995,
+    "snapshot-id" : 1427538264954246454,
+    "timestamp-ms" : 1710862058098,
     "summary" : {
       "operation" : "append",
-      "spark.app.id" : "local-1695119338591",
+      "spark.app.id" : "local-1710862055070",
       "added-data-files" : "1",
       "added-records" : "60175",
-      "added-files-size" : "4382949",
+      "added-files-size" : "4115457",
       "changed-partition-count" : "1",
       "total-records" : "60175",
-      "total-files-size" : "4382949",
+      "total-files-size" : "4115457",
       "total-data-files" : "1",
       "total-delete-files" : "0",
       "total-position-deletes" : "0",
       "total-equality-deletes" : "0"
     },
-    "manifest-list" : "data/iceberg/generated_spec1_0_01/pyspark_iceberg_table/metadata/snap-7876767841642810569-1-f611b743-38c3-457d-85ac-63241d7d91aa.avro",
+    "manifest-list" : "data/iceberg/generated_spec1_0_01/pyspark_iceberg_table/metadata/snap-1427538264954246454-1-bbab5b8f-dd0a-40e7-8ae6-af228cd96267.avro",
     "schema-id" : 0
   } ],
   "statistics" : [ ],
   "snapshot-log" : [ {
-    "timestamp-ms" : 1695119341995,
-    "snapshot-id" : 7876767841642810569
+    "timestamp-ms" : 1710862058098,
+    "snapshot-id" : 1427538264954246454
   } ],
   "metadata-log" : [ ]
 }

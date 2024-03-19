@@ -34,11 +34,7 @@ SELECT * FROM ICEBERG_SCAN('data/iceberg/generated_spec1_0_01/pyspark_iceberg_ta
 ----
 
 query I nosort q1
-SELECT * FROM ICEBERG_SCAN('data/iceberg/generated_spec1_0_01/pyspark_iceberg_table/metadata/v6.metadata.json') WHERE l_partkey_int < 30 ORDER BY uuid;
-----
-
-query I nosort q1
-SELECT * FROM PARQUET_SCAN('data/iceberg/generated_spec1_0_01/expected_results/q05/data/*.parquet')  WHERE l_partkey_int < 30 ORDER BY uuid;
+SELECT * FROM ICEBERG_SCAN('data/iceberg/generated_spec1_0_01/pyspark_iceberg_table/metadata/v9.metadata.json') WHERE l_partkey_int < 30 ORDER BY uuid;
 ----
 
 ### Iceberg spec v2
@@ -62,11 +58,7 @@ SELECT * FROM ICEBERG_SCAN('data/iceberg/generated_spec2_0_01/pyspark_iceberg_ta
 
 # Check data is identical, sorting by uuid to guarantee unique order
 query I nosort q2
-SELECT * FROM ICEBERG_SCAN('data/iceberg/generated_spec2_0_01/pyspark_iceberg_table/metadata/v6.metadata.json') WHERE l_partkey_int < 30 ORDER BY uuid;
-----
-
-query I nosort q2
-SELECT * FROM PARQUET_SCAN('data/iceberg/generated_spec2_0_01/expected_results/q05/data/*.parquet') WHERE l_partkey_int < 30 ORDER BY uuid;
+SELECT * FROM ICEBERG_SCAN('data/iceberg/generated_spec2_0_01/pyspark_iceberg_table/metadata/v9.metadata.json') WHERE l_partkey_int < 30 ORDER BY uuid;
 ----
 
 endloop
