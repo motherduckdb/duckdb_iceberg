@@ -2,19 +2,21 @@
 # description: test iceberg extension
 # group: [iceberg]
 
-# Before we load the extension, this will fail
-statement error
-SELECT * FROM ICEBERG_SCAN('data/iceberg/lineitem_iceberg');
-----
-Catalog Error
+# Commented out because we preload iceberg extension in MD
+# # Before we load the extension, this will fail
+# statement error
+# SELECT * FROM ICEBERG_SCAN('data/iceberg/lineitem_iceberg');
+# ----
+# Catalog Error
 
 require iceberg
 
 # parquet is required for scanning this parquet-backed iceberg table
-statement error
-SELECT count(*) FROM ICEBERG_SCAN('data/iceberg/lineitem_iceberg', ALLOW_MOVED_PATHS=TRUE);
-----
-Catalog Error
+# commented out in MD because (hybrid) the bind-replace that generates parquet_scans is executed on duckling, so this succeeds
+# statement error
+# SELECT count(*) FROM ICEBERG_SCAN('data/iceberg/lineitem_iceberg', ALLOW_MOVED_PATHS=TRUE);
+# ----
+# Catalog Error
 
 require parquet
 
